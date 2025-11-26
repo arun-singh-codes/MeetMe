@@ -23,17 +23,17 @@ const server =  createServer(app);
 const io = connectToSocket(server);
 
 app.set("port" ,(process.env.PORT || 3000))
-app.use(cors(
-  {
-    origin: [ "http://localhost:5173" , "https://meetme-frontend.onrender.com"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  }
-));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://meetme-frontend.onrender.com"
+  ],
+  credentials: true,
+}));
+
 app.use(cookieParser());
 app.use(express.json({limit: "40kb"}));
 app.use(express.urlencoded({limit: "40kb", extended: true }));
-app.options("*", cors());
 
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
