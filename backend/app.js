@@ -33,7 +33,7 @@ app.use(cors(
 app.use(cookieParser());
 app.use(express.json({limit: "40kb"}));
 app.use(express.urlencoded({limit: "40kb", extended: true }));
-
+app.options("*", cors());
 
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
