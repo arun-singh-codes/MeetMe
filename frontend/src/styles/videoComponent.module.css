@@ -1,0 +1,137 @@
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background:black;
+
+}
+
+
+.meetUserVideoLarge {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* transform: translate(-50%, -50%); */
+    height: 100%;
+    width:100%;
+    
+    /* border-radius: 20px; */
+    
+}
+
+.buttonContainers {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0);
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+.conferenceView { 
+
+    display: flex;
+    
+    padding: 10px;
+    gap: 10px;
+}
+
+.conferenceView  video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
+}
+
+.chatRoom {
+    position: absolute;
+    height: 88vh;
+    top: 0.8rem;
+    right: 2.8rem;
+    background: white;
+    border-radius: 0.4rem;
+    width: 30vw;
+    padding-inline: 20px;
+}
+
+.chatContainer {
+    position: relative;
+    height: 100%;
+}
+
+
+
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+}
+
+.videoArea{
+    position: absolute;
+    top:1.0rem;
+    left:-1rem;
+    border-radius: 0.4rem;
+    width:55.5rem;
+    height: 36rem;
+}
+
+.videoArea video{
+  height:100% ;
+  width: 100%;
+}
+.othersVideosList{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    width: 26rem;
+    height: 36.5rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: yellow;
+
+}
+.othersVideos{
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    overflow-wrap: none;
+    width: 26rem;
+    height:20rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.othersVideos video{
+    max-height: 9rem;
+    max-width: 12rem;
+    border-radius: 0.4rem;
+    flex: 1 1 150px;    /* grow =1, shrink=1, min width = 150px */
+   
+
+
+}
+
+.myVideo{
+    position: absolute;
+    bottom: 0.119rem;
+    right: 0.119rem;
+    height: 12rem;
+    width: 99%;
+    border-radius: 0.4rem;
+    background-color: red;
+}
+
+.myVideo video{
+    position: absolute;
+    bottom: 0.119rem;
+    right: 0.119rem;
+    height: 12rem;
+    width: 99%;
+    border-radius: 0.4rem;
+    background-color: red;
+}
