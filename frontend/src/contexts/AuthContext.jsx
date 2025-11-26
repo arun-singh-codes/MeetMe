@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
 
   let isAuthenticated= async()=>{
     try{  
-      let response = await axios.get("http://localhost:3000/auth/verify_user", {withCredentials: true});
+      let response = await axios.get(`${server}auth/verify_user`, {withCredentials: true});
       return response.data.status;
     }catch(err){  
       throw err;
