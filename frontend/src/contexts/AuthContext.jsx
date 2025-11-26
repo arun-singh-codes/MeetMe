@@ -1,11 +1,11 @@
 import { createContext} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import server from "../environment.js";
 export const AuthContext = createContext();
 
 const client = axios.create({
-  baseURL: `http://localhost:3000/users`, withCredentials: true,              //to allow cookies
+  baseURL: `${server}users`, withCredentials: true,              //to allow cookies
 });
 
 
