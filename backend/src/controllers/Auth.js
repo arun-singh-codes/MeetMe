@@ -47,8 +47,8 @@ const Signup = async (req, res, next) => {
      return res.cookie("token", token, {
       withCredentials: true, //  Auth properly work kare // ye frontend .. browser ko btata hai ki jab request bhejoge to  token cookie mujhe vapas bhejna agar merpe aur cors pe ye set ho {withCredentials: true}
       httpOnly: true, // Browser ke JS se (document.cookie) is cookie ko dekh ya modify nahi kar sakte.   XSS (Cross-Site Scripting) attacks se protection.
-      secure: false, // HTTPS only (production)
-      sameSite: "lax", // Cross-site cookies allowed
+      secure: true, // HTTPS only (production)
+      sameSite: "none", // Cross-site cookies allowed
      expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)  // saved in browser for 3 days in milliseconds
 
     })
@@ -87,8 +87,8 @@ const Login = async (req, res, next) => {
         .cookie("token", token, {
           withCredentials: true,
           httpOnly: true,
-          secure: false, // HTTPS only (production)
-          sameSite: "lax", // Cross-site cookies allowed
+          secure: true, // HTTPS only (production)
+          sameSite: "none", // Cross-site cookies allowed
           expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // saved in browser for 3 days
         })
         .json({
