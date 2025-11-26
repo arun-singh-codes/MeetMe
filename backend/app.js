@@ -25,7 +25,7 @@ const io = connectToSocket(server);
 app.set("port" ,(process.env.PORT || 3000))
 app.use(cors(
   {
-    origin: ["http://localhost:3000" , "http://localhost:5173"],
+    origin: ["http://localhost:3000" , "http://localhost:5173" , "https://meetme-frontend.onrender.com/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }
